@@ -1,3 +1,12 @@
+
+import os
+
+
+
+print(file_list)
+
+# the lines below were available at start
+"""
 import pymongo
 
 # Provide the mongodb localhost url to connect python to mongodb.
@@ -23,3 +32,4 @@ all_record = collection.find()
 # Printing all records present in the collection
 for idx, record in enumerate(all_record):
      print(f"{idx}: {record}")
+"""

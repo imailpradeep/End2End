@@ -1,0 +1,11 @@
+0. Create requirements.txt, .env, setup.py, .gitignore files and copy paste from 
+    https://github.com/yadav-avnish/aps-fault-detection 
+1. Connect to mongo DB using the format
+    "mongodb+srv://<username>:<password>@cluster0-saugt.mongodb.net/
+2. Create data_dump.py file to save the downloaded data into mongoDB because in industry 
+    the files in mongoDB will keep getting updated and we need to use the updated files from mongoDB
+3. Create logger.py file for logging
+    from logger import logging and type logging.info(f"starting ... from {directory}/{file} to ...")
+4. Create exception.py file for exception handling
+    from exception import ecommerce_exception and try: and except Exception as e:    raise ecommerce_exception(e, sys)
+5. Now you need to get data from mongoDB to df to work on it, hence make a function in utils.py
