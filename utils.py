@@ -1,7 +1,6 @@
 import pandas as pd
 from logger import logging
 from exception import ecommerce_exception
-from data_dump import client
 import os,sys, pymongo
 from pymongo import MongoClient
 
@@ -41,12 +40,12 @@ def get_data_from_MongoDB():
             df_list.append(df_name)
         logging.info(f"The dataframes have been obtained as a list in df_list ")
         logging.info(f"The names of files produced are : {df_names_list}")
+        print(df_names_list)
         return df_list
     except Exception as e:
         raise ecommerce_exception(e, sys) 
     
-df_list = get_data_from_MongoDB()
-
+"""
 def join_df(df_list):
     final_df = pd.DataFrame()
     for i in range(len(df_list)):
@@ -54,5 +53,6 @@ def join_df(df_list):
     return final_df
 
 #final_df = join_df(df_list)
-# something to commit
 
+
+"""

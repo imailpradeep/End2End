@@ -1,9 +1,11 @@
 
-import os
+from data_dump import upload_data_to_mongoDB
+from utils import get_data_from_MongoDB
 
 
+upload_data_to_mongoDB()
+df_list = get_data_from_MongoDB()
 
-print(file_list)
 
 # the lines below were available at start
 """
