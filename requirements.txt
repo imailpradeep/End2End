@@ -15,4 +15,6 @@ websockets==10.3
 wincertstore==0.2
 xgboost==1.6.2
 pymongo==4.2.0
+matplotlib==3.6.2
+seaborn==0.12.2
 -e .
