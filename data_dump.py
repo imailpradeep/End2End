@@ -4,10 +4,12 @@ from logger import logging
 from exception import ecommerce_exception
 
 
+MongoURL = os.getenv("MONGO_DB_URL")
+
 def upload_data_to_mongoDB():
     # Provide the mongodb localhost url to connect python to mongodb.
     try:
-        client = pymongo.MongoClient("mongodb+srv://imailpradeep:ammaacha@cluster0.gujy4jv.mongodb.net/test")
+        client = pymongo.MongoClient(MongoURL)
     except Exception as e:
         raise ecommerce_exception(e, sys) 
 
