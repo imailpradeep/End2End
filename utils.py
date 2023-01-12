@@ -9,7 +9,7 @@ from pymongo import MongoClient
 # collect the tables into separate dataframes
 
 def get_data_from_MongoDB(): 
-        
+    """ collects data from mongoDB and combines all the data into df_list file""" 
     try:
         client = pymongo.MongoClient("mongodb+srv://imailpradeep:ammaacha@cluster0.gujy4jv.mongodb.net/test")
         logging.info("connected to MongoDB")
@@ -29,7 +29,7 @@ def get_data_from_MongoDB():
         for file in collections:
             logging.info(f"Reading data from database: MachineLearning and collection: {file}")
             df_name = 'df_' + file # get individual names
-            df_names_list.append(df_name   )
+            df_names_list.append(df_name)
             df_name = pd.DataFrame(list(client['MachineLearning'][file].find()))
             logging.info(f"Found columns: {df_name.columns}")
                 

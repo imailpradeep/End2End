@@ -9,3 +9,6 @@
 4. Create exception.py file for exception handling
     from exception import ecommerce_exception and try: and except Exception as e:    raise ecommerce_exception(e, sys)
 5. Now you need to get data from mongoDB to df to work on it, hence make a function in utils.py
+6. In main.py call upload file to mongoDB and call file from MongoDB 
+7. the dataset has to be analysed using dataset_EDA_FE.ipynb
+

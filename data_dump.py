@@ -7,6 +7,7 @@ from exception import ecommerce_exception
 MongoURL = os.getenv("MONGO_DB_URL")
 
 def upload_data_to_mongoDB():
+    """ uploads data to mondoDB from the market_basket folder"""
     # Provide the mongodb localhost url to connect python to mongodb.
     try:
         client = pymongo.MongoClient(MongoURL)

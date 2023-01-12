@@ -3,7 +3,8 @@ from data_dump import upload_data_to_mongoDB
 from utils import get_data_from_MongoDB
 
 # upload data from market_basket folder to MongoDB inorder to replicate industry standards
-upload_data_to_mongoDB()
+# to be done after deleting collections in MongoDB due to space restrictions
+#upload_data_to_mongoDB()
 
 # download data from MongoDB
 df_list = get_data_from_MongoDB()
